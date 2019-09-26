@@ -1,20 +1,139 @@
 <!DOCTYPE html>
-<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+    <!-- Favicon End -->
+    <title>Shiriff</title>
     <!-- <meta name="author" content="name"> -->
     <!-- <meta name="description" content="description here"> -->
     <!-- <meta name="keywords" content="keywords,here"> -->
     <style type="text/css">
-        .page-background { background: url(../assets/images/bg.png) repeat; }
+        html {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            margin: unset;
+        }
+
+        .page-background {
+            background: url(assets/images/background.png) repeat;
+            height: 100vh;
+            width: 100%;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+        }
+
+        .header__logo__line {
+            display: block;
+            background: #2f3338;
+            height: 4px;
+            position: relative;
+            margin: auto;
+            margin-right: unset;
+        }
+
+        .header__hamburger {
+            display: block;
+            position: relative;
+            top: 2vh;
+            left: 1vw;
+            height: 25px;
+            width: 40px;
+        }
+
+        .header__logo__line--top {
+            width: 20px;
+            top: 0;
+        }
+
+        .header__logo__line--middle {
+            width: 14px;
+            top: 0.7vh;
+            right: 5px;
+        }
+
+        .header__logo__line--bottom {
+            width: 38px;
+            top: 1.4vh
+        }
+
+        .hero-section {
+            margin: auto;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            top: 15vh;
+        }
+
+        .hero-title {
+            color: #2f3338;
+            font-family: PPWoodland;
+            font-weight: 200;
+            font-size: 4.25vw;
+            line-height: 1.15;
+            margin: auto;
+            font-kerning: none;
+            text-rendering: optimizeSpeed;
+            backface-visibility: hidden;
+        }
+
+        .hero-desc {
+            font-family: PPWoodland;
+            font-size: 19px;
+            font-weight: 100;
+            line-height: 1.4;
+            width: 90%;
+            margin: auto;
+            margin-top: 15px;
+        }
+
+        .hero-links {
+            color: brown;
+            font-family: helvetica;
+            text-decoration: none;
+        }
+
+        a.hero-links:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="page-background">
+        <a href="#" class="header__hamburger" aria-label="Logo Ensembliers">
+            <span class="header__logo__line header__logo__line--top"></span>
+            <span class="header__logo__line header__logo__line--middle"></span>
+            <span class="header__logo__line header__logo__line--bottom"></span>
+        </a>
+        <section class="hero-section">
+            <div class="hero-title"> Welcome to Shire!</div>
+            <div class="hero-desc">
+                The Shire is described as a small but beautiful and fruitful land, beloved by its inhabitants. The
+                Shire was quite densely populated in parts with many villages and a few towns, but it still was open
+                enough to allow for wide forested areas and marshes. There were green, rolling hills and freshly
+                tilled earth, along with gardens and flower boxes on window sills. Thanks to the protective presence
+                of the <a class="hero-links" href="https://en.wikipedia.org/wiki/Rangers_of_the_North">Rangers of
+                    the North</a> in the lands of the former Arnor, the Shire for centuries ignored the
+                wide world outside, despite being traversed by the East Road. <br>
+                <blockquote style="font-style:oblique;">
+                    "Though a Tolkien by name, I am a Suffield by tastes, talents, and upbringing, and any comer of
+                    that
+                    county [Worcestershire] (however fair or squalid) is in an indefinable way 'home' to me, as no
+                    other
+                    part of the world is."
+                </blockquote>
+                <p>― Letter 44 (Letter 44 is a letter written by J.R.R. Tolkien and published in <a
+                        href="https://en.wikipedia.org/wiki/The_Letters_of_J._R._R._Tolkien" class="hero-links"> The
+                        Letters of J.R.R. Tolkien</a>.)
+                </p>
+            </div>
+        </section>
+    </div>
 </body>
-
-</html>
