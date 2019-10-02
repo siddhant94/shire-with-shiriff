@@ -22,9 +22,13 @@
             margin: unset;
         }
 
+        html, body {
+            height: 100%;
+        }
+
         .page-background {
             background: url(assets/images/background.png) repeat;
-            height: 100vh;
+            height: 100%;
             width: 100%;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
         }
@@ -68,7 +72,7 @@
             position: relative;
             display: flex;
             flex-wrap: wrap;
-            top: 15vh;
+            margin-top: 15vh;
         }
 
         .hero-title {
@@ -101,6 +105,15 @@
 
         a.hero-links:hover {
             text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .hero-title {
+                font-size: 10.25vw;
+            }
+            .hero-desc {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
