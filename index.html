@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!-- Temp comment while testin webhook -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,6 +13,7 @@
     <!-- <meta name="author" content="name"> -->
     <!-- <meta name="description" content="description here"> -->
     <!-- <meta name="keywords" content="keywords,here"> -->
+    <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
     <style type="text/css">
         html {
             -webkit-font-smoothing: antialiased;
@@ -22,13 +23,14 @@
             margin: unset;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
         }
 
         .page-background {
             background: url(assets/images/background.png) repeat;
-            height: 100%;
+            /*height: 100%;*/
             width: 100%;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
         }
@@ -107,12 +109,54 @@
             text-decoration: underline;
         }
 
+        .sidenav-menu {
+            font-family: 'Grenze', serif;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .sidenav-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav-menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            padding-top: 0px;
+        }
+
         @media only screen and (max-width: 600px) {
             .hero-title {
                 font-size: 10.25vw;
             }
+
             .hero-desc {
                 font-size: 16px;
+            }
+        }
+
+        @media screen and (max-height: 550px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
             }
         }
     </style>
@@ -120,12 +164,16 @@
 
 <body>
     <div class="page-background">
-        <a href="#" class="header__hamburger" aria-label="Logo Ensembliers">
+        <a href="#" class="header__hamburger" aria-label="Logo Ensembliers" onclick="openSideMenu()">
             <span class="header__logo__line header__logo__line--top"></span>
             <span class="header__logo__line header__logo__line--middle"></span>
             <span class="header__logo__line header__logo__line--bottom"></span>
         </a>
-        <section class="hero-section">
+        <div id="sidenav" class="sidenav-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Work in progress</a>
+        </div>
+        <section id="main-container" class="hero-section">
             <div class="hero-title"> Welcome to Shire!</div>
             <div class="hero-desc">
                 The Shire is described as a small but beautiful and fruitful land, beloved by its inhabitants. The
@@ -149,4 +197,17 @@
             </div>
         </section>
     </div>
+
+    <script>
+        function openSideMenu() {
+            document.getElementById("sidenav").style.width = "250px";
+            document.getElementById("main-container").style.marginLeft = "250px";
+            document.getElementById("main-container").style.opacity = 0.5;
+        }
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+            document.getElementById("main-container").style.marginLeft = "0px";
+            document.getElementById("main-container").style.opacity = 1;
+        }
+    </script>
 </body>
